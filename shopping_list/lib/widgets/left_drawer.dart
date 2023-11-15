@@ -1,8 +1,9 @@
-//OK TODO Implement this library.
+// TODO Implement this library.
 import 'package:flutter/material.dart';
+import 'package:shopping_list/screens/list_product.dart';
 import 'package:shopping_list/screens/menu.dart';
 
-// OK TODO: Impor halaman ShopFormPage jika sudah dibuat
+// TODO: Impor halaman ShopFormPage jika sudah dibuat
 import 'package:shopping_list/screens/shoplist_form.dart';
 
 class LeftDrawer extends StatelessWidget {
@@ -14,7 +15,7 @@ class LeftDrawer extends StatelessWidget {
       child: ListView(
         children: [
           const DrawerHeader(
-            // OK TODO: Bagian drawer header
+            // TODO: Bagian drawer header
             decoration: BoxDecoration(
               color: Colors.indigo,
             ),
@@ -42,7 +43,7 @@ class LeftDrawer extends StatelessWidget {
               ],
             ),
           ),
-          // OK TODO: Bagian routing
+          // TODO: Bagian routing
           ListTile(
             leading: const Icon(Icons.home_outlined),
             title: const Text('Halaman Utama'),
@@ -61,7 +62,7 @@ class LeftDrawer extends StatelessWidget {
             // Bagian redirection ke ShopFormPage
             onTap: () {
               /*
-              OK TODO: Buatlah routing ke ShopFormPage di sini,
+              TODO: Buatlah routing ke ShopFormPage di sini,
               setelah halaman ShopFormPage sudah dibuat.
               */
               Navigator.pushReplacement(
@@ -72,6 +73,17 @@ class LeftDrawer extends StatelessWidget {
               );
             },
           ),
+          ListTile(
+            leading: const Icon(Icons.shopping_basket),
+            title: const Text('Daftar Produk'),
+            onTap: () {
+                // Route menu ke halaman produk
+                Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const ProductPage()),
+                );
+            },
+        ),
         ],
       ),
     );
